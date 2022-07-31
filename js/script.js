@@ -7,6 +7,7 @@ let todoList = (function () {
 
     let textarea = $('textarea');
     let addButton = $('#button');
+    let list = $('#list');
     let map = { Enter: false, Control: false };
 
     function newItem() {
@@ -18,7 +19,7 @@ let todoList = (function () {
         if (textareaValue === '') {
             alert("You must write something!");
         } else {
-            $('#list').append(li);
+            list.append(li);
         }
 
         function crossOut() {
@@ -39,7 +40,7 @@ let todoList = (function () {
         function deleteListItem() {
             li.fadeOut(250);
         }
-        $('#list').sortable();
+        list.sortable();
     }
 
     textarea.on('keydown', e => {
@@ -50,7 +51,7 @@ let todoList = (function () {
         if (Object.values(map)
             .filter(v => v === true)
             .length === 2) {
-            newItem();
+            todoList.newItem();
         }
     });
 
@@ -69,10 +70,16 @@ let todoList = (function () {
     addButton.on('click', e => {
         textarea.val('');
         textarea.focus();
+        todoList.newItem();
+        textareaValue;
+
     })
 
     return {
         newItem: newItem
+    
+        
+       
     };
 
 })();
