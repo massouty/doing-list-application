@@ -5,7 +5,7 @@
 
 let todoList = (function () {
 
-    let textarea = $('textarea');
+    let textarea = $('#textarea');
     let addButton = $('#button');
     let list = $('#list');
     let map = { Enter: false, Control: false };
@@ -72,6 +72,8 @@ let todoList = (function () {
         textarea.focus();
         todoList.newItem();
         textareaValue;
+     
+
 
     })
 
