@@ -51,7 +51,7 @@ let todoList = (function () {
         if (Object.values(map)
             .filter(v => v === true)
             .length === 2) {
-            todoList.newItem();
+          
         }
     });
 
@@ -63,7 +63,7 @@ let todoList = (function () {
         }
 
         if (e.key in map) {
-            map[e.key] = false;
+            map[e.key] = false; 
         }
     });
 
@@ -71,7 +71,7 @@ let todoList = (function () {
         textarea.val('');
         textarea.focus();
         todoList.newItem();
-        textareaValue;
+       
      
 
 
