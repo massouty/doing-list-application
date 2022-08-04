@@ -70,7 +70,7 @@ let todoList = (function () {
     addButton.on('click', e => {
         textarea.val('');
         textarea.focus();
-        todoList.newItem();
+      
        
      
 
